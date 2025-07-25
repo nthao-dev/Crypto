@@ -1,0 +1,62 @@
+.notfoundpage {
+  position: relative;
+  .blur {
+    @include midabs;
+    opacity: 0.5;
+  }
+}
+.notfound {
+  height: 100vh;
+  .container {
+    @include midcol;
+    height: 100%;
+    .number {
+      font-size: 18rem;
+      line-height: 16rem;
+      letter-spacing: 0px;
+      color: var(--main-cl);
+      font-family: sb;
+      margin-bottom: 15px;
+    }
+    .textbox {
+      margin-bottom: 40px;
+      .heading {
+        margin-bottom: 16px;
+      }
+      .desc {
+        max-width: 557px;
+      }
+    }
+  }
+
+  &__btns {
+    @include midflex;
+    & > .btnmain {
+      margin-right: 24px;
+    }
+  }
+  @include xxs {
+    .container {
+      .number {
+        margin-bottom: 32px;
+        font-size: 12rem;
+        line-height: 12rem;
+      }
+      .textbox {
+        margin-bottom: 32px;
+      }
+    }
+    &__btns {
+      flex-direction: column;
+      width: 100%;
+      & > .btnmain {
+        margin-right: initial;
+        margin-bottom: 16px;
+      }
+      .btnmain {
+        @include midflex;
+        width: 100%;
+      }
+    }
+  }
+}

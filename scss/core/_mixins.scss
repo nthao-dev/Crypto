@@ -1,0 +1,260 @@
+// Align Center Item
+@mixin midalign {
+  display: flex;
+  align-items: center;
+}
+
+@mixin midflex {
+  @include midalign;
+  justify-content: center;
+}
+
+@mixin evenflex {
+  @include midalign;
+  justify-content: space-evenly;
+}
+
+@mixin sbflex {
+  @include midalign;
+  justify-content: space-between;
+}
+
+@mixin midcol {
+  @include midalign;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@mixin midcol-rev {
+  @include midalign;
+  flex-direction: column-reverse;
+  justify-content: center;
+}
+
+@mixin midabs {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// Padding Left, Right
+@mixin padlr {
+  padding-left: var(--gap);
+  padding-right: var(--gap);
+}
+
+// Image
+@mixin imgscale {
+  transform: scale(1.05);
+}
+
+@mixin imgcover($width: 100%, $height: 100%) {
+  width: $width;
+  height: $height;
+  object-fit: cover;
+  object-position: center;
+}
+
+@mixin imgcontain($width: 100%, $height: 100%) {
+  width: $width;
+  height: $height;
+  object-fit: contain;
+  object-position: center;
+}
+
+// Limit Line And Add 3 Dots
+@mixin overtext($line) {
+  display: -webkit-box;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+// Text Button
+@mixin textbtn {
+  font-size: var(--fs-textbtn);
+  font-family: sb;
+  line-height: var(--lh-textbtn);
+  letter-spacing: var(--ls-textbtn);
+  color: var(--white-cl);
+}
+
+@mixin textbtn-m {
+  font-size: var(--fs-textbtn-m);
+  font-family: sb;
+  line-height: var(--lh-textbtn-m);
+  letter-spacing: var(--ls-textbtn-m);
+  color: var(--white-cl);
+}
+
+// Text Menu / Text Tag
+@mixin textmenu {
+  font-size: var(--fs-textmenu);
+  font-family: sm;
+  line-height: var(--lh-textmenu);
+  letter-spacing: var(--ls-textmenu);
+  color: var(--white-cl);
+}
+
+@mixin textmenu-m {
+  font-size: var(--fs-textmenu-m);
+  font-family: sm;
+  line-height: var(--lh-textmenu-m);
+  letter-spacing: var(--ls-textmenu-m);
+  color: var(--white-cl);
+}
+
+@mixin texttag {
+  font-size: var(--fs-texttag);
+  font-family: sm;
+  line-height: var(--lh-texttag);
+  letter-spacing: var(--ls-texttag);
+  color: var(--white-cl);
+}
+
+@mixin texttag-m {
+  font-size: var(--fs-texttag-m);
+  font-family: sm;
+  line-height: var(--lh-texttag-m);
+  letter-spacing: var(--ls-texttag-m);
+  color: var(--white-cl);
+}
+
+// Body Text
+@mixin bodytext {
+  font-family: sr;
+  font-size: var(--fs-bodytext);
+  line-height: var(--lh-bodytext);
+  letter-spacing: var(--ls-bodytext);
+  color: var(--white-cl);
+}
+
+@mixin bodytext-m {
+  font-family: sr;
+  font-size: var(--fs-bodytext-m);
+  line-height: var(--lh-bodytext-m);
+  letter-spacing: var(--ls-bodytext-m);
+  color: var(--white-cl);
+}
+
+@mixin bodytext-small {
+  font-family: sr;
+  font-size: var(--fs-bodytext-small);
+  line-height: var(--lh-bodytext-small);
+  letter-spacing: var(--ls-bodytext-small);
+  color: var(--white-cl);
+}
+
+@mixin bodytext-small-m {
+  font-family: sr;
+  font-size: var(--fs-bodytext-small-m);
+  line-height: var(--lh-bodytext-small-m);
+  letter-spacing: var(--ls-bodytext-small-m);
+  color: var(--white-cl);
+}
+
+// Heading
+@mixin headingh1 {
+  font-size: var(--fs-h1);
+  line-height: var(--lh-h1);
+  letter-spacing: var(--ls-h1);
+  font-family: sb;
+  color: var(--white-cl);
+}
+
+@mixin headingh1-m {
+  font-size: var(--fs-h1-m);
+  line-height: var(--lh-h1-m);
+  letter-spacing: var(--ls-h1-m);
+  font-family: sb;
+  color: var(--white-cl);
+}
+
+@mixin headingh2 {
+  font-size: var(--fs-h2);
+  line-height: var(--lh-h2);
+  letter-spacing: var(--ls-h2);
+  font-family: sb;
+  color: var(--white-cl);
+}
+
+@mixin headingh2-m {
+  font-size: var(--fs-h2-m);
+  line-height: var(--lh-h2-m);
+  letter-spacing: var(--ls-h2-m);
+  font-family: sb;
+  color: var(--white-cl);
+}
+
+@mixin textlabel {
+  font-size: var(--fs-label);
+  line-height: var(--lh-label);
+  letter-spacing: var(--ls-label);
+  font-family: sb;
+  color: var(--white-cl);
+  text-transform: uppercase;
+}
+
+@mixin textlabel-m {
+  font-size: var(--fs-label-m);
+  line-height: var(--lh-label-m);
+  letter-spacing: var(--ls-label-m);
+  font-family: sb;
+  color: var(--black-cl);
+  text-transform: uppercase;
+}
+
+// Hide - Unhide
+@mixin hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+@mixin unhide {
+  opacity: 1;
+  visibility: visible;
+}
+
+@mixin handle-grid($col, $fr: 1fr) {
+  display: grid;
+  grid-template-columns: repeat($col, $fr);
+  gap: var(--grid-gap);
+}
+
+// Media Query
+@mixin lg {
+  @media screen and (max-width: $lg-max) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media screen and (max-width: $md-max) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media screen and (max-width: $sm-max) {
+    @content;
+  }
+}
+
+@mixin xs {
+  @media screen and (max-width: $xs-max) {
+    @content;
+  }
+}
+
+@mixin xxs {
+  @media screen and (max-width: $xxs-max) {
+    @content;
+  }
+}
+
+@mixin mw($maxWidth) {
+  @media screen and (max-width: $maxWidth) {
+    @content;
+  }
+}

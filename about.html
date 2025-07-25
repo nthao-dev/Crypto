@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About</title>
+
+    <!-- Main Meta Tag -->
+    <meta name="title" content="iPhone 14 Pro Max" />
+    <meta name="description" content="Dự án iPhone 14 Pro Max" />
+    <meta name="keyword" content="iphone14promax" />
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="canonical" href="" />
+    <!-- Add Domain Into Href HERE When Had Domain-->
+
+    <!-- Facebook Meta Tag -->
+    <meta property="og:url" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="" />
+
+    <!-- Twitter Meta Tag -->
+    <meta name="twitter:card" content="" />
+    <meta name="twitter:site" content="" />
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:description" content="" />
+    <meta name="twitter:image" content="" />
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="./dest/style.min.css" />
+
+    <!-- Link Fonts -->
+    <link rel="stylesheet" href="./dest/fonts.css" />
+
+    <!-- Loading Page -->
+    <style>
+      .loading {
+        z-index: 999;
+        position: fixed;
+        left: 0;
+        right: 0;
+        height: 100vh;
+        background-color: var(--blue-dark-cl);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .loading .loading-line {
+        width: 160px;
+        height: 4px;
+        background-color: var(--main-cl);
+        position: relative;
+      }
+
+      .loading .loading-line div {
+        position: absolute;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background-color: var(--white-cl);
+      }
+
+      .loading .loading-percent {
+        color: var(--white-cl);
+        font-size: 1.6rem;
+        line-height: 100%;
+        letter-spacing: 0px;
+        font-family: sb;
+        margin-top: 13px;
+      }
+
+      .loading.--done {
+        /* opacity: 0;
+        visibility: hidden; */
+        transform: translateY(-100%);
+        transition-timing-function: cubic-bezier(0.53, 0.9, 0.59, 0.25);
+        transition: 0.5s;
+        pointer-events: none;
+      }
+      @media screen and (max-width: 575px) {
+        .loading .loading-line {
+          width: 130px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Loading -->
+    <div class="loading">
+      <div class="loading-line"><div></div></div>
+      <span class="loading-percent">0%</span>
+    </div>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="header__left">
+          <a href="./" class="header__logo">
+            <picture>
+              <source
+                media="(max-width: 991px)"
+                srcset="./img/logo-crypto-mobile.svg"
+              />
+              <img src="./img/logo-crypto-desktop.svg" alt="" />
+            </picture>
+          </a>
+          <ul class="header__navs">
+            <li><a href="./index.html" class="btn">Home</a></li>
+            <li><a href="./about.html" class="btn">About</a></li>
+            <li><a href="./pricing.html" class="btn">Pricing</a></li>
+            <li><a href="./tokens.html" class="btn">Tokens</a></li>
+            <li><a href="./blog.html" class="btn">Blog</a></li>
+            <li><a href="./contactus.html" class="btn">contact us</a></li>
+          </ul>
+        </div>
+        <div class="header__right">
+          <a href="" class="btn btnmain">DOWNLOAD APP</a>
+          <div class="btnmenu"><span></span></div>
+        </div>
+      </div>
+      <!-- Nav Menu Mobile -->
+      <nav class="navmenu">
+        <ul>
+          <li><a href="./index.html" class="btn">Home</a></li>
+          <li><a href="./about.html" class="btn">About</a></li>
+          <li><a href="./pricing.html" class="btn">Pricing</a></li>
+          <li><a href="./tokens.html" class="btn">Tokens</a></li>
+          <li><a href="./blog.html" class="btn">Blog</a></li>
+          <li><a href="./contactus.html" class="btn">contact us</a></li>
+        </ul>
+        <a href="" class="btnmain">Download App</a>
+        <div class="blur"><img src="./img/blur-main.svg" alt="" /></div>
+      </nav>
+    </header>
+
+    <!-- Main -->
+    <main class="aboutpage">
+      <!-- About Us -->
+      <section class="aboutus">
+        <div class="container">
+          <div class="textbox --center">
+            <h1 class="heading --h1">About Finance Flow</h1>
+            <p class="desc">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat
+              nulla suspendisse tortor aenean dis placerat. Scelerisque
+              imperdiet vitae dolor non aliquam. Malesuada.
+            </p>
+          </div>
+          <div class="aboutus__flow">
+            <div class="textbox --row">
+              <h2 class="heading">What drives Finance Flow?</h2>
+              <p class="desc">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat
+                nulla suspendisse tortor aene.
+              </p>
+            </div>
+            <div class="aboutus__flow-list">
+              <div class="aboutus__flow--item">
+                <div class="icon-wrap">
+                  <div class="icon">
+                    <img src="./img/icon-users.svg" alt="" />
+                  </div>
+                </div>
+                <div class="textbox">
+                  <h3 class="heading">Open Source</h3>
+                  <p class="desc">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et
+                    nibh urna in proin dui purus bibendum cras. Morbi cursus
+                    nunc.
+                  </p>
+                </div>
+              </div>
+              <div class="aboutus__flow--item">
+                <div class="icon-wrap">
+                  <div class="icon">
+                    <img src="./img/icon-earth.svg" alt="" />
+                  </div>
+                </div>
+                <div class="textbox">
+                  <h3 class="heading">worldwide</h3>
+                  <p class="desc">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et
+                    nibh urna in proin dui purus bibendum cras. Morbi cursus
+                    nunc.
+                  </p>
+                </div>
+              </div>
+              <div class="aboutus__flow--item">
+                <div class="icon-wrap">
+                  <div class="icon">
+                    <img src="./img/icon-magnifyingglass.svg" alt="" />
+                  </div>
+                </div>
+                <div class="textbox">
+                  <h3 class="heading">Transparent</h3>
+                  <p class="desc">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et
+                    nibh urna in proin dui purus bibendum cras. Morbi cursus
+                    nunc.
+                  </p>
+                </div>
+              </div>
+              <div class="aboutus__flow--item">
+                <div class="icon-wrap">
+                  <div class="icon">
+                    <img src="./img/icon-compass.svg" alt="" />
+                  </div>
+                </div>
+                <div class="textbox">
+                  <h3 class="heading">Community Driven</h3>
+                  <p class="desc">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et
+                    nibh urna in proin dui purus bibendum cras. Morbi cursus
+                    nunc.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="blur"><img src="./img/blur.svg" alt="" /></div>
+      </section>
+
+      <!-- Mission -->
+      <section class="mission">
+        <div class="container">
+          <div class="mission__content">
+            <div class="mission__content-item">
+              <h2 class="title">Our mission</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Parturient lorem purus justo, ultricies. Sollicitudin odio
+                elementum urna placerat lacus, vulputate. Non malesuada viverra
+                et ultrices cras. Tincidunt tempor, blandit augue ac feugiat.
+                Praesent arcu tempus ullamcorper quisque in. Magna fermentum,
+                lacus, fermentum arcu.
+              </p>
+              <p>
+                Vulputate pellentesque proin facilisis dignissim gravida sed
+                faucibus nunc. Nunc eget pharetra, in vitae porta lacus. Elit in
+                nisl, in quis nulla tellus suscipit id. Semper velit odio cras
+                pretium tristique habitant. Elit eu penatibus congue orci
+                turpis. Enim diam id.
+              </p>
+            </div>
+            <div class="mission__content-item">
+              <h2 class="title">Our story</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing e lit.
+                Parturient lorem purus justo, ultricies. Sollicitudin odio
+                elementum urna placerat lacus, vulputate. Non malesuada viverra
+                et ultrices cras. Tincidunt tempor, blandit augue ac feugiat.
+                Praesent arcu tempus ullamcorper quisque in. Magna fermentum,
+                lacus, fermentum arcu.
+              </p>
+              <p>
+                Vulputate pellentesque proin facilisis dignissim gravida sed
+                faucibus nunc. Nunc eget pharetra, in vitae porta lacus. Elit in
+                nisl, in quis nulla tellus suscipit id. Semper velit odio cras
+                pretium tristique habitant. Elit eu penatibus congue orci
+                turpis.
+              </p>
+            </div>
+          </div>
+          <div class="mission__img"><img src="./img/aboutus.jpg" alt="" /></div>
+        </div>
+        <div class="planet"><img src="./img/planet.svg" alt="" /></div>
+      </section>
+
+      <!-- Timeline -->
+      <section class="timeline">
+        <div class="container">
+          <div class="textbox">
+            <h2 class="heading">Timeline</h2>
+            <p class="desc">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse varius enim in eros elementum tristique. Duis cursus,
+              mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
+              libero vitae erat.
+            </p>
+          </div>
+          <div class="timeline__list">
+            <div class="timeline__item">
+              <div class="dot"></div>
+              <div class="timeline__item-details">
+                <h3 class="year">2014</h3>
+                <h4 class="subtitle">Announcement</h4>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  mattis vivamus at mattis bibendum congue cras id interdum.
+                  Risus leo et.
+                </p>
+              </div>
+            </div>
+            <div class="timeline__item">
+              <div class="dot"></div>
+              <div class="timeline__item-details">
+                <h3 class="year">2016</h3>
+                <h4 class="subtitle">Announcement</h4>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  mattis vivamus at mattis bibendum congue cras id interdum.
+                  Risus leo et.
+                </p>
+              </div>
+            </div>
+            <div class="timeline__item">
+              <div class="dot"></div>
+              <div class="timeline__item-details">
+                <h3 class="year">2018</h3>
+                <h4 class="subtitle">Announcement</h4>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  mattis vivamus at mattis bibendum congue cras id interdum.
+                  Risus leo et.
+                </p>
+              </div>
+            </div>
+            <div class="timeline__item">
+              <div class="dot"></div>
+              <div class="timeline__item-details">
+                <h3 class="year">2022</h3>
+                <h4 class="subtitle">Announcement</h4>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  mattis vivamus at mattis bibendum congue cras id interdum.
+                  Risus leo et.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Our Team -->
+      <section class="ourteam">
+        <div class="container">
+          <div class="textbox --row">
+            <h2 class="heading">Our Team</h2>
+            <p class="desc">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Parturient lorem purus justo, ultricies.
+            </p>
+          </div>
+          <div class="ourteam__list">
+            <div class="ourteam__item">
+              <div class="ourteam__item-img">
+                <img srcset="./img/team-member1.png 2x" alt="" />
+              </div>
+              <div class="ourteam__item-info">
+                <h4 class="name">John Carter</h4>
+                <p class="role">CEO & CO-Founder</p>
+              </div>
+            </div>
+            <div class="ourteam__item">
+              <div class="ourteam__item-img">
+                <img srcset="./img/team-member2.png 2x" alt="" />
+              </div>
+              <div class="ourteam__item-info">
+                <h4 class="name">Sophie Moore</h4>
+                <p class="role">Community Lead</p>
+              </div>
+            </div>
+            <div class="ourteam__item">
+              <div class="ourteam__item-img">
+                <img srcset="./img/team-member3.png 2x" alt="" />
+              </div>
+              <div class="ourteam__item-info">
+                <h4 class="name">Alex Turner</h4>
+                <p class="role">Operations</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Investors -->
+      <section class="investors">
+        <div class="container">
+          <div class="textbox --center">
+            <h2 class="heading">Investors</h2>
+            <p class="desc">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Parturient lorem purus justo, ultricies.
+            </p>
+          </div>
+          <div class="partner">
+            <div class="partner__list">
+              <div class="partner__item">
+                <img src="./img/icon-company1.svg" alt="" />
+              </div>
+              <div class="partner__item">
+                <img src="./img/icon-company2.svg" alt="" />
+              </div>
+              <div class="partner__item">
+                <img src="./img/icon-company3.svg" alt="" />
+              </div>
+              <div class="partner__item">
+                <img src="./img/icon-company4.svg" alt="" />
+              </div>
+              <div class="partner__item">
+                <img src="./img/icon-company5.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__above">
+          <a class="footer__logo">
+            <img src="./img/logo-crypto-desktop.svg" alt="" />
+          </a>
+          <div class="footer__socials">
+            <a href="#" target="_blank" class="footer__social"
+              ><img src="./img/icon-instagram.svg" alt=""
+            /></a>
+            <a href="#" target="_blank" class="footer__social"
+              ><img src="./img/icon-facebook.svg" alt=""
+            /></a>
+            <a href="#" target="_blank" class="footer__social"
+              ><img src="./img/icon-linkedin.svg" alt=""
+            /></a>
+          </div>
+        </div>
+        <div class="footer__center">
+          <div class="footer__center-left">
+            <h3>MENU</h3>
+            <div class="footer__navs">
+              <a href="#" class="footer__nav">HOME</a>
+              <a href="#" class="footer__nav">TOKENS</a>
+              <a href="#" class="footer__nav">ABOUT</a>
+              <a href="#" class="footer__nav">BLOG</a>
+              <a href="#" class="footer__nav">PRICING</a>
+              <a href="#" class="footer__nav">CONTACT US</a>
+            </div>
+          </div>
+          <div class="footer__center-right">
+            <div class="footer__center-right--content">
+              <h3>Download our Application</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+                sed nulla integer
+              </p>
+            </div>
+            <div class="footer__center-right--btns">
+              <a href="#" class="btnmain"
+                ><img src="./img/icon-applestore.svg" alt="" /><span
+                  >APP STORE</span
+                ></a
+              >
+              <a href="#" class="btnmain"
+                ><img src="./img/icon-chplay.svg" alt="" /><span
+                  >PLAY STORE</span
+                ></a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="footer__under">
+          <span>&#169; 2023 CFD Circle, Inc.</span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Link JS -->
+    <script src="./dest/jsmain.min.js"></script>
+    <script src="./dest/main.js"></script>
+  </body>
+</html>

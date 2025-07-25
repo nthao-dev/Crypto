@@ -1,0 +1,32 @@
+a {
+  text-decoration: none;
+  color: var(--white-cl);
+}
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  max-width: var(--max-width-page);
+  margin: 0 auto;
+  @include bodytext;
+  position: relative;
+  background-color: var(--blue-dark-cl);
+  overflow-x: hidden;
+  &.--disable-scroll {
+    overflow: hidden;
+  }
+  main {
+    &.homepage {
+      overflow: hidden;
+    }
+  }
+  .container {
+    width: 100%;
+    max-width: var(--max-width-container);
+    @include padlr;
+    margin: 0 auto;
+  }
+}

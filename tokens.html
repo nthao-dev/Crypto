@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tokens</title>
+
+    <!-- Main Meta Tag -->
+    <meta name="title" content="iPhone 14 Pro Max" />
+    <meta name="description" content="Dự án iPhone 14 Pro Max" />
+    <meta name="keyword" content="iphone14promax" />
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="canonical" href="" />
+    <!-- Add Domain Into Href HERE When Had Domain-->
+
+    <!-- Facebook Meta Tag -->
+    <meta property="og:url" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="" />
+
+    <!-- Twitter Meta Tag -->
+    <meta name="twitter:card" content="" />
+    <meta name="twitter:site" content="" />
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:description" content="" />
+    <meta name="twitter:image" content="" />
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="./dest/style.min.css" />
+
+    <!-- Link Fonts -->
+    <link rel="stylesheet" href="./dest/fonts.css" />
+
+    <!-- Loading Page -->
+    <style>
+      .loading {
+        z-index: 999;
+        position: fixed;
+        left: 0;
+        right: 0;
+        height: 100vh;
+        background-color: var(--blue-dark-cl);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .loading .loading-line {
+        width: 160px;
+        height: 4px;
+        background-color: var(--main-cl);
+        position: relative;
+      }
+
+      .loading .loading-line div {
+        position: absolute;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background-color: var(--white-cl);
+      }
+
+      .loading .loading-percent {
+        color: var(--white-cl);
+        font-size: 1.6rem;
+        line-height: 100%;
+        letter-spacing: 0px;
+        font-family: sb;
+        margin-top: 13px;
+      }
+
+      .loading.--done {
+        /* opacity: 0;
+        visibility: hidden; */
+        transform: translateY(-100%);
+        transition-timing-function: cubic-bezier(0.53, 0.9, 0.59, 0.25);
+        transition: 0.5s;
+        pointer-events: none;
+      }
+      @media screen and (max-width: 575px) {
+        .loading .loading-line {
+          width: 130px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Loading -->
+    <div class="loading">
+      <div class="loading-line"><div></div></div>
+      <span class="loading-percent">0%</span>
+    </div>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="header__left">
+          <a href="./" class="header__logo">
+            <picture>
+              <source
+                media="(max-width: 991px)"
+                srcset="./img/logo-crypto-mobile.svg"
+              />
+              <img src="./img/logo-crypto-desktop.svg" alt="" />
+            </picture>
+          </a>
+          <ul class="header__navs">
+            <li><a href="./index.html" class="btn">Home</a></li>
+            <li><a href="./about.html" class="btn">About</a></li>
+            <li><a href="./pricing.html" class="btn">Pricing</a></li>
+            <li><a href="./tokens.html" class="btn">Tokens</a></li>
+            <li><a href="./blog.html" class="btn">Blog</a></li>
+            <li><a href="./contactus.html" class="btn">contact us</a></li>
+          </ul>
+        </div>
+        <div class="header__right">
+          <a href="" class="btn btnmain">DOWNLOAD APP</a>
+          <div class="btnmenu"><span></span></div>
+        </div>
+      </div>
+      <!-- Nav Menu Mobile -->
+      <nav class="navmenu">
+        <ul>
+          <li><a href="./index.html" class="btn">Home</a></li>
+          <li><a href="./about.html" class="btn">About</a></li>
+          <li><a href="./pricing.html" class="btn">Pricing</a></li>
+          <li><a href="./tokens.html" class="btn">Tokens</a></li>
+          <li><a href="./blog.html" class="btn">Blog</a></li>
+          <li><a href="./contactus.html" class="btn">contact us</a></li>
+        </ul>
+        <a href="" class="btnmain">Download App</a>
+        <div class="blur"><img src="./img/blur-main.svg" alt="" /></div>
+      </nav>
+    </header>
+
+    <!-- Main -->
+    <main class="tokenspage">
+      <section class="tokens">
+        <div class="container">
+          <div class="textbox --center">
+            <h1 class="heading --h1">Tokens</h1>
+            <p class="desc">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat
+              nulla suspendisse tortor aenean dis placerat. Scelerisque
+            </p>
+          </div>
+
+          <!-- <div class="tokens__wrap">
+            <div class="tokens__wrap-heading">
+              <h2 class="name">Name</h2>
+              <h2 class="desc">Description</h2>
+              <h2 class="cap">Market Cap</h2>
+              <h2 class="volume">Volume</h2>
+              <h2 class="website">Website</h2>
+            </div>
+            <div class="tokens__wrap-list">
+              <div class="tokens__wrap-item --btc">
+                <div class="tokens__wrap-item--name name">
+                  <div class="tokens__wrap-item--img">
+                    <img src="./img/icon-bitcoin.svg" alt="" />
+                  </div>
+                  <span class="tokens__wrap-item--coin">Bitcoin</span>
+                  <div class="tag">BTC</div>
+                </div>
+                <div class="tokens__wrap-item--desc desc">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </p>
+                </div>
+                <div class="tokens__wrap-item--cap cap">
+                  <span>$252,844,036,453 USD</span>
+                </div>
+                <div class="tokens__wrap-item--volume volume">
+                  <span>$30,504,879,301 USD</span>
+                </div>
+                <div class="tokens__wrap-item--website website">
+                  <a href="#" target="_blank">Visit Website</a>
+                </div>
+              </div>
+              <div class="tokens__wrap-item --eth">
+                <div class="tokens__wrap-item--name name">
+                  <div class="tokens__wrap-item--img">
+                    <img src="./img/icon-ethereum.svg" alt="" />
+                  </div>
+                  <span class="tokens__wrap-item--coin">Ethereum</span>
+                  <div class="tag">ETH</div>
+                </div>
+                <div class="tokens__wrap-item--desc desc">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </p>
+                </div>
+                <div class="tokens__wrap-item--cap cap">
+                  <span>$252,844,036,453 USD</span>
+                </div>
+                <div class="tokens__wrap-item--volume volume">
+                  <span>$30,504,879,301 USD</span>
+                </div>
+                <div class="tokens__wrap-item--website website">
+                  <a href="#" target="_blank">Visit Website</a>
+                </div>
+              </div>
+              <div class="tokens__wrap-item --ltc">
+                <div class="tokens__wrap-item--name name">
+                  <div class="tokens__wrap-item--img">
+                    <img src="./img/icon-litecoin.svg" alt="" />
+                  </div>
+                  <span class="tokens__wrap-item--coin">Litecoin</span>
+                  <div class="tag">LTC</div>
+                </div>
+                <div class="tokens__wrap-item--desc desc">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </p>
+                </div>
+                <div class="tokens__wrap-item--cap cap">
+                  <span>$252,844,036,453 USD</span>
+                </div>
+                <div class="tokens__wrap-item--volume volume">
+                  <span>$30,504,879,301 USD</span>
+                </div>
+                <div class="tokens__wrap-item--website website">
+                  <a href="#" target="_blank">Visit Website</a>
+                </div>
+              </div>
+              <div class="tokens__wrap-item --trx">
+                <div class="tokens__wrap-item--name name">
+                  <div class="tokens__wrap-item--img">
+                    <img src="./img/icon-tron.svg" alt="" />
+                  </div>
+                  <span class="tokens__wrap-item--coin">TRON</span>
+                  <div class="tag">TRX</div>
+                </div>
+                <div class="tokens__wrap-item--desc desc">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </p>
+                </div>
+                <div class="tokens__wrap-item--cap cap">
+                  <span>$252,844,036,453 USD</span>
+                </div>
+                <div class="tokens__wrap-item--volume volume">
+                  <span>$30,504,879,301 USD</span>
+                </div>
+                <div class="tokens__wrap-item--website website">
+                  <a href="#" target="_blank">Visit Website</a>
+                </div>
+              </div>
+            </div>
+          </div> -->
+          <div class="tokens__wrap">
+            <div class="tokens__wrap-name">
+              <h2 class="name">NAME</h2>
+              <div class="tokens__wrap-name--item --btc --active">
+                <div class="tokens__wrap-name--img">
+                  <img src="./img/icon-bitcoin.svg" alt="" />
+                </div>
+                <span class="tokens__wrap-name--coin">Bitcoin</span>
+                <div class="tag">BTC</div>
+              </div>
+              <div class="tokens__wrap-name--item --eth">
+                <div class="tokens__wrap-name--img">
+                  <img src="./img/icon-ethereum.svg" alt="" />
+                </div>
+                <span class="tokens__wrap-name--coin">Ethereum</span>
+                <div class="tag">ETH</div>
+              </div>
+              <div class="tokens__wrap-name--item --ltc">
+                <div class="tokens__wrap-name--img">
+                  <img src="./img/icon-litecoin.svg" alt="" />
+                </div>
+                <span class="tokens__wrap-name--coin">Litecoin</span>
+                <div class="tag">LTC</div>
+              </div>
+              <div class="tokens__wrap-name--item --trx">
+                <div class="tokens__wrap-name--img">
+                  <img src="./img/icon-tron.svg" alt="" />
+                </div>
+                <span class="tokens__wrap-name--coin">TRON</span>
+                <div class="tag">TRX</div>
+              </div>
+            </div>
+            <div class="tokens__wrap-desc">
+              <h2 class="desc">DESCRIPTION</h2>
+              <div class="tokens__wrap-desc--item --btc --active">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+              <div class="tokens__wrap-desc--item --eth">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+              <div class="tokens__wrap-desc--item --ltc">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+              <div class="tokens__wrap-desc--item --trx">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+            </div>
+            <div class="tokens__wrap-cap">
+              <h2 class="cap">MARKET CAP</h2>
+              <div class="tokens__wrap-cap--item --btc --active">
+                <span>$252,844,036,453 USD</span>
+              </div>
+              <div class="tokens__wrap-cap--item --eth">
+                <span>$252,844,036,453 USD</span>
+              </div>
+              <div class="tokens__wrap-cap--item --ltc">
+                <span>$252,844,036,453 USD</span>
+              </div>
+              <div class="tokens__wrap-cap--item --trx">
+                <span>$252,844,036,453 USD</span>
+              </div>
+            </div>
+            <div class="tokens__wrap-volume">
+              <h2 class="volume">VOLUME</h2>
+              <div class="tokens__wrap-volume--item --btc --active">
+                <span>$30,504,879,301 USD</span>
+              </div>
+              <div class="tokens__wrap-volume--item --eth">
+                <span>$30,504,879,301 USD</span>
+              </div>
+              <div class="tokens__wrap-volume--item --ltc">
+                <span>$30,504,879,301 USD</span>
+              </div>
+              <div class="tokens__wrap-volume--item --trx">
+                <span>$30,504,879,301 USD</span>
+              </div>
+            </div>
+            <div class="tokens__wrap-website">
+              <h2 class="website">WEBSITE</h2>
+              <div class="tokens__wrap-website--item --btc --active">
+                <a class="btn" href="#" target="_blank">Visit Website</a>
+              </div>
+              <div class="tokens__wrap-website--item --eth">
+                <a class="btn" href="#" target="_blank">Visit Website</a>
+              </div>
+              <div class="tokens__wrap-website--item --ltc">
+                <a class="btn" href="#" target="_blank">Visit Website</a>
+              </div>
+              <div class="tokens__wrap-website--item --trx">
+                <a class="btn" href="#" target="_blank">Visit Website</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__above">
+          <a class="footer__logo">
+            <img src="./img/logo-crypto-desktop.svg" alt="" />
+          </a>
+          <div class="footer__socials">
+            <a href="#" target="_blank" class="footer__social"
+              ><img src="./img/icon-instagram.svg" alt=""
+            /></a>
+            <a href="#" target="_blank" class="footer__social"
+              ><img src="./img/icon-facebook.svg" alt=""
+            /></a>
+            <a href="#" target="_blank" class="footer__social"
+              ><img src="./img/icon-linkedin.svg" alt=""
+            /></a>
+          </div>
+        </div>
+        <div class="footer__center">
+          <div class="footer__center-left">
+            <h3>MENU</h3>
+            <div class="footer__navs">
+              <a href="#" class="footer__nav">HOME</a>
+              <a href="#" class="footer__nav">TOKENS</a>
+              <a href="#" class="footer__nav">ABOUT</a>
+              <a href="#" class="footer__nav">BLOG</a>
+              <a href="#" class="footer__nav">PRICING</a>
+              <a href="#" class="footer__nav">CONTACT US</a>
+            </div>
+          </div>
+          <div class="footer__center-right">
+            <div class="footer__center-right--content">
+              <h3>Download our Application</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+                sed nulla integer
+              </p>
+            </div>
+            <div class="footer__center-right--btns">
+              <a href="#" class="btnmain"
+                ><img src="./img/icon-applestore.svg" alt="" /><span
+                  >APP STORE</span
+                ></a
+              >
+              <a href="#" class="btnmain"
+                ><img src="./img/icon-chplay.svg" alt="" /><span
+                  >PLAY STORE</span
+                ></a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="footer__under">
+          <span>&#169; 2023 CFD Circle, Inc.</span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Link JS -->
+    <script src="./dest/jsmain.min.js"></script>
+    <script src="./dest/main.js"></script>
+  </body>
+</html>

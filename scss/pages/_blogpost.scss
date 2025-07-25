@@ -1,0 +1,144 @@
+.blogpost {
+  --pd-section: 196px 0 126px 0;
+  padding: var(--pd-section);
+  .container,
+  .blogpost__heading,
+  .blogpost__content {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: var(--grid-gap);
+  }
+  &__heading,
+  &__content {
+    grid-column: 1/13;
+  }
+  &__heading {
+    margin-bottom: 35px;
+    .author,
+    .textbox {
+      grid-column: 2/12;
+    }
+    .author {
+      margin-bottom: 40px;
+    }
+  }
+  &__content {
+    row-gap: 64px;
+    &-imgmain {
+      grid-column: 1/13;
+    }
+    &-img,
+    &-highlight {
+      grid-column: 2/12;
+    }
+    &-img,
+    &-imgmain {
+      img {
+        @include imgcover;
+      }
+    }
+    &-text {
+      grid-column: 3/11;
+      .title {
+        @include headingh2;
+        margin-bottom: 40px;
+      }
+
+      .paragraph {
+        & + .paragraph {
+          margin-top: 16px;
+        }
+        & + .subtitle {
+          margin-top: 40px;
+        }
+      }
+      .subtitle {
+        font-size: 2.8rem;
+        line-height: 3rem;
+        letter-spacing: 0.28px;
+        font-family: sb;
+        margin-bottom: 24px;
+      }
+    }
+    &-highlight {
+      background-color: var(--blue-cl);
+      padding: 80px 0;
+      border-radius: 40px;
+      @include midflex;
+      .desc {
+        max-width: 613px;
+        font-size: 2.2rem;
+        line-height: 3.8rem;
+        letter-spacing: 0;
+        font-family: sm;
+      }
+    }
+  }
+  @include sm {
+    &__content {
+      &-highlight {
+        padding: 80px;
+      }
+    }
+  }
+  @include xs {
+    &__heading {
+      margin-bottom: 25px;
+      .author,
+      .textbox {
+        grid-column: 1/13;
+      }
+      .author {
+        margin-bottom: 32px;
+      }
+    }
+    &__content {
+      &-img,
+      &-highlight,
+      &-text,
+      &-highlight {
+        grid-column: 1/13;
+      }
+      &-highlight {
+        padding: 32px;
+      }
+    }
+  }
+}
+
+.blogpostpage {
+  .lastestpost {
+    --pd-section: 120px 0;
+    padding: var(--pd-section);
+    .container {
+      & > .textbox {
+        margin-bottom: 56px;
+      }
+    }
+    @include xs {
+      .container {
+        & > .textbox {
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          //   .btnmain {
+          //     width: 100%;
+          //     @include midflex;
+          //   }
+        }
+      }
+    }
+    @include xxs {
+      .container {
+        & > .textbox {
+          flex-direction: column;
+          align-items: start;
+          .btnmain {
+            width: 100%;
+            @include midflex;
+          }
+        }
+      }
+    }
+  }
+}

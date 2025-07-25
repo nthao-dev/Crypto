@@ -1,0 +1,130 @@
+.pricing {
+  --pd-section: 172px 0 225px 0;
+  padding: var(--pd-section);
+  .container {
+    & > .textbox {
+      margin-bottom: 40px;
+      .heading {
+        margin-bottom: 16px;
+      }
+      .desc {
+        max-width: 568px;
+        margin: 0 auto;
+      }
+    }
+  }
+  &__methods {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-between;
+    margin-bottom: 56px;
+  }
+  &__method {
+    @include midalign;
+    .icon-wrap {
+      margin-right: 24px;
+      flex-shrink: 0;
+    }
+    h3 {
+      white-space: nowrap;
+    }
+  }
+  &__wrap {
+    &-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--grid-gap);
+    }
+    &--item {
+      padding: 48px 29px 42px 32px;
+      background-color: var(--blue-cl);
+      border-radius: 40px;
+      .tag {
+        margin-bottom: 16px;
+      }
+      .textbox {
+        margin-bottom: 40px;
+        .heading {
+          margin-bottom: 16px;
+        }
+      }
+      .features {
+        h3 {
+          @include textlabel;
+          margin-bottom: 16px;
+        }
+        ul {
+          margin-bottom: 54px;
+          li {
+            position: relative;
+            display: flex;
+            padding-left: 22px;
+            font-size: 1.8rem;
+            line-height: 2rem;
+            letter-spacing: 0;
+            &:not(:last-child) {
+              margin-bottom: 16px;
+            }
+            &::before {
+              content: "";
+              position: absolute;
+              top: 50%;
+              left: 0;
+              transform: translateY(-50%);
+              width: 6px;
+              height: 6px;
+              border-radius: 100%;
+              background-color: var(--main-cl);
+            }
+          }
+        }
+      }
+    }
+  }
+  @include sm {
+    --pd-section: 121px 0 80px 0;
+    padding: var(--pd-section);
+    .container {
+      & > .textbox {
+        text-align: left;
+        .desc {
+          margin: initial;
+        }
+      }
+    }
+    &__methods {
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: center;
+      gap: var(--grid-gap);
+    }
+    &__wrap {
+      &-list {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+  @include xs {
+    &__wrap {
+      &-list {
+        grid-template-columns: 0.8fr;
+        justify-content: center;
+      }
+    }
+  }
+  @include xxs {
+    &__methods {
+      grid-template-columns: 1fr;
+      gap: 38px;
+      margin-bottom: 48px;
+    }
+    &__wrap {
+      &-list {
+        grid-template-columns: 1fr;
+        justify-content: center;
+        gap: 16px;
+      }
+    }
+  }
+  // @include mw(375px) {
+  // }
+}

@@ -1,0 +1,332 @@
+// About Us
+.aboutus {
+  --pd-section: 192px 0 232px;
+  padding: var(--pd-section);
+  position: relative;
+  @include midcol;
+  .container {
+    & > .textbox {
+      @include midcol;
+      margin-bottom: 112px;
+      .heading {
+        margin-bottom: 21px;
+      }
+      .desc {
+        max-width: 606px;
+      }
+    }
+  }
+  &__flow {
+    & > .textbox {
+      margin-bottom: 29px;
+      gap: var(--grid-gap);
+      .desc {
+        max-width: 496px;
+      }
+    }
+    &-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--grid-gap);
+    }
+    &--item {
+      display: flex;
+      align-items: start;
+      gap: 24px;
+      padding: 58px 32px;
+      background-color: var(--blue-cl);
+      border-radius: 40px;
+      .icon-wrap {
+        flex-shrink: 0;
+      }
+      .textbox {
+        .heading {
+          @include textlabel;
+          margin-bottom: 7px;
+        }
+        .desc {
+          max-width: 402px;
+        }
+      }
+    }
+  }
+  .blur {
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    opacity: 0.5;
+    img {
+      @include imgcover;
+    }
+  }
+  @include xs {
+    --pd-section: 121px 0 44px 0;
+    padding: var(--pd-section);
+    .container {
+      & > .textbox {
+        align-items: start;
+        margin-bottom: 48px;
+        .heading {
+          margin-bottom: 16px;
+        }
+        .desc {
+          text-align: initial;
+        }
+      }
+    }
+    &__flow {
+      & > .textbox {
+        gap: 0;
+        margin-bottom: 16px;
+      }
+      &-list {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+    }
+  }
+}
+
+// Mission
+.mission {
+  --pd-section: 0 0 180px 0;
+  padding: var(--pd-section);
+  overflow-x: hidden;
+  .container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--grid-gap);
+  }
+  &__content {
+    grid-column: 1/7;
+    width: calc(100% + var(--grid-gap));
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &-item {
+      .title {
+        margin-bottom: 16px;
+        @include headingh2;
+        & + p {
+          padding-bottom: 32px;
+        }
+      }
+    }
+  }
+  &__img {
+    grid-column: 8/13;
+    img {
+      @include imgcover;
+      width: initial;
+      max-width: initial;
+    }
+  }
+  .planet {
+    display: none;
+  }
+  @include md {
+    --pd-section: 0 0 80px 0;
+    padding: var(--pd-section);
+    .container {
+      grid-template-columns: 1fr;
+      margin-bottom: 64px;
+    }
+    &__content {
+      grid-column: initial;
+      width: 100%;
+      gap: 80px;
+      &-item {
+        .title {
+          & + p {
+            padding-bottom: 26px;
+          }
+        }
+      }
+    }
+    &__img {
+      grid-column: initial;
+      display: none;
+      img {
+        @include imgcover;
+      }
+    }
+    .planet {
+      display: block;
+      img {
+        @include imgcover;
+      }
+    }
+  }
+}
+
+// Timeline
+.timeline {
+  --pd-section: 0 0 120px 0;
+  padding: var(--pd-section);
+  .container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--grid-gap);
+    position: relative;
+    .textbox {
+      grid-column: 1/5;
+      position: sticky;
+      top: calc(var(--header-height) + 10px);
+      height: fit-content;
+      transition: var(--duration);
+      .heading {
+        margin-bottom: 16px;
+      }
+    }
+  }
+  &__list {
+    grid-column: 6/13;
+  }
+  &__item {
+    display: flex;
+    gap: 54px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--white-cl);
+    .dot {
+      width: 24px;
+      height: 24px;
+      background-color: var(--white-cl);
+      border-radius: 100%;
+      flex-shrink: 0;
+    }
+    &-details {
+      .year {
+        font-size: 2.8rem;
+        line-height: 3rem;
+        letter-spacing: 0.28px;
+        padding-bottom: 16px;
+      }
+      .subtitle {
+        @include textlabel;
+        padding-bottom: 12px;
+      }
+    }
+    &:not(:last-child) {
+      margin-bottom: 80px;
+    }
+  }
+  @include xs {
+    --pd-section: 0 0 80px 0;
+    padding: var(--pd-section);
+    .container {
+      grid-template-columns: 1fr;
+      gap: 40px;
+      .textbox {
+        grid-column: initial;
+        position: initial;
+      }
+    }
+    &__list {
+      grid-column: initial;
+    }
+    &__item {
+      &:not(:last-child) {
+        margin-bottom: 56px;
+      }
+    }
+  }
+}
+
+// Our Team
+.ourteam {
+  --pd-section: 0 0 127px 0;
+  padding: var(--pd-section);
+  .container {
+    .textbox {
+      margin-bottom: 49px;
+      .desc {
+        max-width: 496px;
+      }
+    }
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--grid-gap);
+  }
+  &__item {
+    background-color: var(--blue-cl);
+    border-radius: 40px;
+    padding: 24px;
+    &-img {
+      aspect-ratio: 327 / 400;
+      border-radius: 32px;
+      margin-bottom: 32px;
+      overflow: hidden;
+      img {
+        display: block;
+        @include imgcover;
+      }
+    }
+    &-info {
+      .name,
+      .role {
+        text-transform: uppercase;
+        font-size: 1.6rem;
+        line-height: 1.8rem;
+        letter-spacing: 0.8px;
+      }
+      .name {
+        font-family: sb;
+        margin-bottom: 12px;
+      }
+      .role {
+        font-family: sr;
+      }
+    }
+  }
+  @include xs {
+    --pd-section: 0 0 80px 0;
+    padding: var(--pd-section);
+    .container {
+      .textbox {
+        margin-bottom: 24px;
+      }
+    }
+    &__list {
+      grid-template-columns: 0.8fr;
+      gap: 16px;
+      justify-content: center;
+    }
+  }
+  @include xxs {
+    &__list {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+// Investors
+.investors {
+  --pd-section: 0 0 230px 0;
+  padding: var(--pd-section);
+  .container {
+    .textbox {
+      margin-bottom: 41px;
+      .heading {
+        margin-bottom: 16px;
+      }
+      .desc {
+        max-width: 496px;
+        margin: 0 auto;
+      }
+    }
+  }
+  @include xs {
+    --pd-section: 0 0 80px 0;
+    padding: var(--pd-section);
+  }
+  @include xxs {
+    .container {
+      .textbox {
+        margin-bottom: 48px;
+      }
+    }
+  }
+}

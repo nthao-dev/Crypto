@@ -1,0 +1,118 @@
+.footer {
+  padding: 56px 0 32px;
+  background-color: var(--blue-cl);
+  &__above {
+    @include sbflex;
+    margin-bottom: 92px;
+  }
+  &__social {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    border-radius: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    @include midflex;
+    &:not(:first-child) {
+      margin-left: 12px;
+    }
+    &s {
+      @include midflex;
+    }
+  }
+  &__center {
+    @include sbflex;
+    margin-bottom: 125px;
+    &-left {
+      max-width: 280px;
+      h3 {
+        @include textlabel;
+        padding-bottom: 31px;
+        border-bottom: 1px solid var(--white-cl);
+      }
+    }
+    &-right {
+      max-width: 486px;
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 44px 33px;
+      border-radius: 40px;
+      h3 {
+        @include textlabel;
+        margin-bottom: 12px;
+      }
+      &--btns {
+        @include midalign;
+        margin-top: 24px;
+        span {
+          margin-left: 8px;
+        }
+        & > a {
+          margin-right: 16px;
+        }
+      }
+    }
+  }
+  &__navs {
+    margin-top: 35px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+    a {
+      @include textmenu;
+      padding: 9px;
+      &:nth-child(even) {
+        margin-right: -9px;
+      }
+      &:nth-child(odd) {
+        margin-left: -9px;
+      }
+    }
+  }
+  &__under {
+    padding-top: 31px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  @include sm {
+    &__above {
+      flex-direction: column;
+      gap: 24px;
+      margin-bottom: 45px;
+    }
+    &__center {
+      flex-direction: column;
+      gap: 56px;
+      margin-bottom: 32px;
+      &-left {
+        width: 100%;
+        max-width: initial;
+      }
+      &-right {
+        width: 100%;
+        max-width: initial;
+        &--btns {
+          .btnmain {
+            flex: 1;
+            justify-content: center;
+          }
+        }
+      }
+    }
+    &__under {
+      text-align: center;
+    }
+  }
+  @include xxs {
+    &__center {
+      &-right {
+        &--btns {
+          flex-direction: column;
+          gap: 16px;
+          .btnmain {
+            flex: initial;
+            width: 100%;
+            @include midflex;
+          }
+        }
+      }
+    }
+  }
+}

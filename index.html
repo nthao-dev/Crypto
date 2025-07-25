@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+
+    <!-- Main Meta Tag -->
+    <meta name="title" content="iPhone 14 Pro Max" />
+    <meta name="description" content="Dự án iPhone 14 Pro Max" />
+    <meta name="keyword" content="iphone14promax" />
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="canonical" href="" />
+    <!-- Add Domain Into Href HERE When Had Domain-->
+
+    <!-- Facebook Meta Tag -->
+    <meta property="og:url" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="" />
+
+    <!-- Twitter Meta Tag -->
+    <meta name="twitter:card" content="" />
+    <meta name="twitter:site" content="" />
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:description" content="" />
+    <meta name="twitter:image" content="" />
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="./dest/style.min.css" />
+
+    <!-- Link Fonts -->
+    <link rel="stylesheet" href="./dest/fonts.css" />
+
+    <!-- Loading Page -->
+    <style>
+      .loading {
+        z-index: 999;
+        position: fixed;
+        left: 0;
+        right: 0;
+        height: 100vh;
+        background-color: var(--blue-dark-cl);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .loading .loading-line {
+        width: 160px;
+        height: 4px;
+        background-color: var(--main-cl);
+        position: relative;
+      }
+
+      .loading .loading-line div {
+        position: absolute;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background-color: var(--white-cl);
+      }
+
+      .loading .loading-percent {
+        color: var(--white-cl);
+        font-size: 1.6rem;
+        line-height: 100%;
+        letter-spacing: 0px;
+        font-family: sb;
+        margin-top: 13px;
+      }
+
+      .loading.--done {
+        /* opacity: 0;
+        visibility: hidden; */
+        transform: translateY(-100%);
+        transition-timing-function: cubic-bezier(0.53, 0.9, 0.59, 0.25);
+        transition: 0.5s;
+        pointer-events: none;
+      }
+      @media screen and (max-width: 575px) {
+        .loading .loading-line {
+          width: 130px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Loading -->
+    <div class="loading">
+      <div class="loading-line"><div></div></div>
+      <span class="loading-percent">0%</span>
+    </div>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="header__left">
+          <a href="./" class="header__logo">
+            <picture>
+              <source
+                media="(max-width: 991px)"
+                srcset="./img/logo-crypto-mobile.svg"
+              />
+              <img src="./img/logo-crypto-desktop.svg" alt="" />
+            </picture>
+          </a>
+          <ul class="header__navs">
+            <li><a href="./index.html" class="btn">Home</a></li>
+            <li><a href="./about.html" class="btn">About</a></li>
+            <li><a href="./pricing.html" class="btn">Pricing</a></li>
+            <li><a href="./tokens.html" class="btn">Tokens</a></li>
+            <li><a href="./blog.html" class="btn">Blog</a></li>
+            <li><a href="./contactus.html" class="btn">contact us</a></li>
+          </ul>
+        </div>
+        <div class="header__right">
+          <a href="" class="btn btnmain">DOWNLOAD APP</a>
+          <div class="btnmenu"><span></span></div>
+        </div>
+      </div>
+      <!-- Nav Menu Mobile -->
+      <nav class="navmenu">
+        <ul>
+          <li><a href="./index.html" class="btn">Home</a></li>
+          <li><a href="./about.html" class="btn">About</a></li>
+          <li><a href="./pricing.html" class="btn">Pricing</a></li>
+          <li><a href="./tokens.html" class="btn">Tokens</a></li>
+          <li><a href="./blog.html" class="btn">Blog</a></li>
+          <li><a href="./contactus.html" class="btn">contact us</a></li>
+        </ul>
+        <a href="" class="btnmain">Download App</a>
+        <div class="blur"><img src="./img/blur-main.svg" alt="" /></div>
+      </nav>
+    </header>
+
+    <!-- Main -->
+    <main class="homepage">
+      <!-- Section Hero -->
+      <section class="hero">
+        <div class="container">
+          <div class="textbox">
+            <h1 class="heading --h1">
+              Buy, trade, and hold 350+ cryptocurrencies
+            </h1>
+            <p class="desc">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat
+              nulla suspendisse tortor aenean dis placerat.
+            </p>
+          </div>
+          <div class="hero__btns">
+            <a href="#" class="btnmain">DOWNLOAD APP</a>
+            <a href="#" class="btnmain --white-op10-bg">VIEW PRICING</a>
+          </div>
+          <div class="hero__img">
+            <img src="./img/planet.svg" alt="" class="planet" />
+            <img src="./img/blur.svg" alt="" class="blur" />
+          </div>
+        </div>
+
+        <div class="blur"><img src="./img/blur-dark.svg" alt="" /></div>
+      </section>
+
+      <!-- Section Partner -->
+      <section class="partner">
+        <div class="container">
+          <div class="textbox --center">
+            <span class="desc">Finance flow has been featured on</span>
+          </div>
+          <div class="partner__list">
+            <div class="partner__item">
+              <img src="./img/icon-company1.svg" alt="" />
+            </div>
+            <div class="partner__item">
+              <img src="./img/icon-company2.svg" alt="" />
+            </div>
+            <div class="partner__item">
+              <img src="./img/icon-company3.svg" alt="" />
+            </div>
+            <div class="partner__item">
+              <img src="./img/icon-company4.svg" alt="" />
+            </div>
+            <div class="partner__item">
+              <img src="./img/icon-company5.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section Portfolio -->
+      <section class="portfolio">
+        <div class="container">
+          <div class="textbox --center">
+            <h2 class="heading">Build your crypto portfolio</h2>
+            <p class="desc">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat
+              nulla suspendisse tortor aene.
+            </p>
+          </div>
+          <div class="portfolio__info">
+            <div class="portfolio__info--item">
+              <div class="icon-wrap">
+                <div class="icon">
+                  <img src="./img/icon-send-receive.svg" alt="" />
+                </div>
+              </div>
+              <h3 class="title">Send & Receive</h3>
+              <p class="desc">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat
+                nulla suspendisse tortor aene.
+              </p>
+            </div>
+            <div class="portfolio__info--item">
+              <h3 class="title">iOS & Android App</h3>
+              <p class="desc">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+                amet, morbi non at sed neque.
+              </p>
+              <div class="portfolio-iphone">
+                <img srcset="./img/iphone.png 2x" alt="" />
+              </div>
+            </div>
+            <div class="portfolio__info--item">
+              <div class="icon-wrap">
+                <div class="icon">
+                  <img src="./img/icon-chart.svg" alt="" />
+                </div>
+              </div>
+              <h3 class="title">Trading Charts</h3>
+              <p class="desc">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat
+                nulla suspendisse tortor aene.
+              </p>
+            </div>
+            <div class="portfolio__info--item">
+              <div class="icon-wrap">
+                <div class="icon">
+                  <img src="./img/icon-wallet.svg" alt="" />
+                </div>
+              </div>
+              <h3 class="title">100% Secure Wallet</h3>
+              <p class="desc">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat
+                nulla suspendisse tortor aene.
+              </p>
+            </div>
+            <div class="portfolio__info--item">
+              <div class="icon-wrap">
+                <div class="icon">
+                  <img src="./img/icon-timetrading.svg" alt="" />
+                </div>
+              </div>
+              <h3 class="title">Real Time Trading</h3>
+              <p class="desc">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat
+                nulla suspendisse tortor aene.
+              </p>
+            </div>
+          </div>
+          <a href="#" class="portfolio__btn btnmain">DOWNLOAD APP</a>
+        </div>
+        <div class="blur"><img src="./img/blur.svg" alt="" /></div>
+      </section>
+
+      <!-- Section Rewards -->
+      <section class="rewards">
+        <div class="container">
+          <div class="rewards-item">
+            <div class="rewards__img">
+              <img srcset="./img/iphones.png 2x" alt="" />
+            </div>
+            <div class="content-wrap">
+              <div class="textbox">
+                <h2 class="heading">Earn daily rewards on your idle tokens</h2>
+                <p class="desc">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Feugiat nulla suspendisse tortor aene.
+                </p>
+              </div>
+              <div class="content-wrap-list">
+                <div class="content-wrap--item">
+                  <div class="icon-wrap --small">
+                    <div class="icon">
+                      <img src="./img/icon-low-fee.svg" alt="" />
+                    </div>
+                  </div>
+                  <span>Lowest fees in market</span>
+                </div>
+                <div class="content-wrap--item">
+                  <div class="icon-wrap --small">
+                    <div class="icon">
+                      <img src="./img/icon-thunder.svg" alt="" />
+                    </div>
+                  </div>
+                  <span>Fast and secure transactions</span>
+                </div>
+                <div class="content-wrap--item">
+                  <div class="icon-wrap --small">
+                    <div class="icon">
+                      <img src="./img/icon-lock.svg" alt="" />
+                    </div>
+                  </div>
+                  <span>256-bit secure encryption</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="rewards-item">
+            <div class="rewards__img">
+              <img src="./img/apple-computer.svg" alt="" />
+            </div>
+            <div class="content-wrap">
+              <div class="textbox">
+                <h2 class="heading">Earn daily rewards on your idle tokens</h2>
+                <p class="desc">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Feugiat nulla suspendisse tortor aene.
+                </p>
+              </div>
+              <div class="content-wrap-list">
+                <div class="content-wrap--item">
+                  <div class="icon-wrap --small">
+                    <div class="icon">
+                      <img src="./img/icon-low-fee.svg" alt="" />
+                    </div>
+                  </div>
+                  <span>Lowest fees in market</span>
+                </div>
+                <div class="content-wrap--item">
+                  <div class="icon-wrap --small">
+                    <div class="icon">
+                      <img src="./img/icon-thunder.svg" alt="" />
+                    </div>
+                  </div>
+                  <span>Fast and secure transactions</span>
+                </div>
+                <div class="content-wrap--item">
+                  <div class="icon-wrap --small">
+                    <div class="icon">
+                      <img src="./img/icon-lock.svg" alt="" />
+                    </div>
+                  </div>
+                  <span>256-bit secure encryption</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="blur"><img src="./img/blur.svg" alt="" /></div>
+        </div>
+      </section>
+
+      <!-- Section Explore -->
+      <section class="explore">
+        <div class="container">
+          <div class="explore__content">
+            <div class="textbox">
+              <h2 class="heading">
+                Explore endless possibilities with FinanceFlow
+              </h2>
+              <p class="desc">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat
+                nulla suspendisse tortor aene.
+              </p>
+            </div>
+            <a href="#" class="btnmain --white-bg">Download App</a>
+          </div>
+          <div class="explore__img">
+            <img srcset="./img/iphones.png 2x" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Section Testimonial -->
+      <section class="testimonial">
+        <div class="container">
+          <div class="testimonial__title">
+            <div class="textbox --row">
+              <h2 class="heading">What our users say?</h2>
+              <a href="#" class="btnmain">Download App</a>
+            </div>
+          </div>
+
+          <div class="testimonial__list-dots">
+            <span class="testimonial__item-dot"></span>
+            <span class="testimonial__item-dot"></span>
+            <span class="testimonial__item-dot"></span>
+            <span class="testimonial__item-dot"></span>
+          </div>
+        </div>
+        <div class="testimonial__list">
+          <div class="testimonial__list--item">
+            <p class="detail">
+              “Lorem ipsum dolor sit amet, consectetur adipiscing elit.”
+            </p>
+            <div class="author">
+              <div class="author-avatar">
+                <img srcset="./img/testimonial2.png 2x" alt="" />
+              </div>
+              <div class="author-info">
+                <h4 class="author-name">John carter</h4>
+                <span class="author-company">Role, Company</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial__list--item">
+            <p class="detail">
+              “Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+              commodo dolor fermentum dignissim et pellentesque egestas mauris,
+              faucibus. Tellus nisi amet non at phasellus fa ucibus senectus in”
+            </p>
+            <div class="author">
+              <div class="author-avatar">
+                <img srcset="./img/testimonial3.png 2x" alt="" />
+              </div>
+              <div class="author-info">
+                <h4 class="author-name">John carter</h4>
+                <span class="author-company">Role, Company</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial__list--item">
+            <p class="detail">
+              “Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+              commodo dolor fermentum dignissim et pellentesque egestas mauris.”
+            </p>
+            <div class="author">
+              <div class="author-avatar">
+                <img srcset="./img/testimonial2.png 2x" alt="" />
+              </div>
+              <div class="author-info">
+                <h4 class="author-name">John carter</h4>
+                <span class="author-company">Role, Company</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial__list--item">
+            <p class="detail">
+              “Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+              commodo dolor fermentum dignissim et pellentesque egestas mauris,
+              faucibus. Tellus nisi amet non at phasellus fa ucibus senectus in”
+            </p>
+            <div class="author">
+              <div class="author-avatar">
+                <img srcset="./img/testimonial3.png 2x" alt="" />
+              </div>
+              <div class="author-info">
+                <h4 class="author-name">John carter</h4>
+                <span class="author-company">Role, Company</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial__list--item">
+            <p class="detail">
+              “Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+              commodo dolor fermentum dignissim et pellentesque egestas mauris,
+              faucibus. Tellus nisi amet non at phasellus fa ucibus senectus in”
+            </p>
+            <div class="author">
+              <div class="author-avatar">
+                <img srcset="./img/testimonial2.png 2x" alt="" />
+              </div>
+              <div class="author-info">
+                <h4 class="author-name">John carter</h4>
+                <span class="author-company">Role, Company</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial__list--item">
+            <p class="detail">
+              “Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+              commodo dolor fermentum dignissim et pellentesque egestas mauris,
+              faucibus. Tellus nisi amet non at phasellus fa ucibus senectus in”
+            </p>
+            <div class="author">
+              <div class="author-avatar">
+                <img srcset="./img/testimonial3.png 2x" alt="" />
+              </div>
+              <div class="author-info">
+                <h4 class="author-name">John carter</h4>
+                <span class="author-company">Role, Company</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial__list--item">
+            <p class="detail">
+              “Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+              commodo dolor fermentum dignissim et pellentesque egestas mauris,
+              faucibus. Tellus nisi amet non at phasellus fa ucibus senectus in”
+            </p>
+            <div class="author">
+              <div class="author-avatar">
+                <img srcset="./img/testimonial2.png 2x" alt="" />
+              </div>
+              <div class="author-info">
+                <h4 class="author-name">John carter</h4>
+                <span class="author-company">Role, Company</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial__list--item">
+            <p class="detail">
+              “Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+              commodo dolor fermentum dignissim et pellentesque egestas mauris,
+              faucibus. Tellus nisi amet non at phasellus fa ucibus senectus in”
+            </p>
+            <div class="author">
+              <div class="author-avatar">
+                <img srcset="./img/testimonial3.png 2x" alt="" />
+              </div>
+              <div class="author-info">
+                <h4 class="author-name">John carter</h4>
+                <span class="author-company">Role, Company</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="blur"><img src="./img/blur.svg" alt="" /></div>
+      </section>
+
+      <!-- Section Get Started -->
+      <section class="getstarted">
+        <div class="container">
+          <div class="content-wrap">
+            <div class="textbox">
+              <h2 class="heading">Get started today</h2>
+              <p class="desc">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat
+                nulla suspendisse tortor aene.
+              </p>
+            </div>
+            <div class="content-wrap-list">
+              <div class="content-wrap--item">
+                <div class="icon-wrap --small">
+                  <div class="icon">
+                    <img src="./img/icon-download.svg" alt="" />
+                  </div>
+                </div>
+                <span>Download app</span>
+              </div>
+              <div class="content-wrap--item">
+                <div class="icon-wrap --small">
+                  <div class="icon">
+                    <img src="./img/icon-user.svg" alt="" />
+                  </div>
+                </div>
+                <span>Create a free account</span>
+              </div>
+              <div class="content-wrap--item">
+                <div class="icon-wrap --small">
+                  <div class="icon">
+                    <img src="./img/icon-cardtrading.svg" alt="" />
+                  </div>
+                </div>
+                <span>Start trading</span>
+              </div>
+            </div>
+          </div>
+          <div class="getstarted__video">
+            <img
+              class="getstarted__video-thumb"
+              srcset="./img/iphone-getstarted.png 2x"
+              alt=""
+            />
+            <div class="getstarted__video-btnplay">
+              <svg
+                width="26"
+                height="29"
+                viewBox="0 0 26 29"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0.930664 27.2345C0.930664 28.3895 2.17812 29.1139 3.18127 28.5413L25.2412 15.9515C26.2531 15.3741 26.2531 13.9152 25.2412 13.3377L3.18127 0.747929C2.17812 0.175422 0.930664 0.899804 0.930664 2.05482V27.2345Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+            <div class="getstarted__video-overlay"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section News -->
+      <section class="news">
+        <div class="container">
+          <div class="textbox --row">
+            <h2 class="heading">Browse our latest news</h2>
+            <p class="desc">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit non
+              neque orci amet, amet .
+            </p>
+          </div>
+          <div class="post-wrap">
+            <div class="post-item">
+              <div class="post-item--img">
+                <a href="#" class="post-img"
+                  ><img srcset="./img/thumb-news1.png 2x" alt="" />
+                </a>
+                <a class="post-tag">Products</a>
+              </div>
+              <div class="post-item-details">
+                <div class="post-item-content">
+                  <h3 class="post-item--title">
+                    <a href="#">The Basics about Cryptocurrency</a>
+                  </h3>
+                  <p class="post-item--desc">
+                    Lorem ipsum dolor sit ametero irseo, consectetur adipiscing
+                    elit. Scelerisque viverra donec diammeo.
+                  </p>
+                </div>
+                <div class="author">
+                  <div class="author-avatar">
+                    <img srcset="./img/author.png 2x" alt="" />
+                  </div>
+                  <div class="author-info">
+                    <h4 class="author-name">Alex Turner</h4>
+                    <span class="author-date">August 2, 2021</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="post-item">
+              <div class="post-item--img">
+                <a href="#" class="post-img"
+                  ><img srcset="./img/thumb-news2.png 2x" alt=""
+                /></a>
+
+                <a class="post-tag">Products</a>
+              </div>
+              <div class="post-item-details">
+                <div class="post-item-content">
+                  <h3 class="post-item--title">
+                    <a href="#">The Basics about Cryptocurrency</a>
+                  </h3>
+                  <p class="post-item--desc">
+                    Lorem ipsum dolor sit ametero irseo, consectetur adipiscing
+                    elit. Scelerisque viverra donec diammeo.
+                  </p>
+                </div>
+                <div class="author">
+                  <div class="author-avatar">
+                    <img srcset="./img/author.png 2x" alt="" />
+                  </div>
+                  <div class="author-info">
+                    <h4 class="author-name">Alex Turner</h4>
+                    <span class="author-date">August 2, 2021</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="post-item">
+              <div class="post-item--img">
+                <a href="#" class="post-img"
+                  ><img srcset="./img/thumb-news3.png 2x" alt=""
+                /></a>
+                <a class="post-tag">Products</a>
+              </div>
+              <div class="post-item-details">
+                <div class="post-item-content">
+                  <h3 class="post-item--title">
+                    <a href="#">The Basics about Cryptocurrency</a>
+                  </h3>
+                  <p class="post-item--desc">
+                    Lorem ipsum dolor sit ametero irseo, consectetur adipiscing
+                    elit. Scelerisque viverra donec diammeo.
+                  </p>
+                </div>
+                <div class="author">
+                  <div class="author-avatar">
+                    <img srcset="./img/author.png 2x" alt="" />
+                  </div>
+                  <div class="author-info">
+                    <h4 class="author-name">Alex Turner</h4>
+                    <span class="author-date">August 2, 2021</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="news__btn btnmain --white-op10-bg"
+            >View All Articles</a
+          >
+        </div>
+      </section>
+
+      <!-- Section Download -->
+      <section class="download">
+        <div class="container">
+          <div class="textbox --row">
+            <h2 class="heading">Download our app</h2>
+            <p class="desc">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit non
+              neque orci amet, amet .
+            </p>
+          </div>
+          <div class="download__info">
+            <div class="download__info-item">
+              <div class="textbox">
+                <h3 class="heading">Download for iOS</h3>
+                <p class="desc">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Mauris sed nulla integer in pellentesque tortor semper
+                  elementum. Felis.
+                </p>
+              </div>
+              <a href="#" class="btnmain"
+                ><img src="./img/icon-applestore.svg" alt="" />
+                <span>App Store</span></a
+              >
+              <div class="download--img">
+                <img srcset="./img/iphone-download1.png 2x" alt="" />
+              </div>
+            </div>
+            <div class="download__info-item">
+              <div class="textbox">
+                <h3 class="heading">Download for Android</h3>
+                <p class="desc">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Mauris sed nulla integer in pellentesque tortor semper
+                  elementum. Felis.
+                </p>
+              </div>
+              <a href="#" class="btnmain"
+                ><img src="./img/icon-chplay.svg" alt="" />
+                <span>Play Store</span></a
+              >
+              <div class="download--img">
+                <img srcset="./img/iphone-download2.png 2x" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__above">
+          <a class="footer__logo">
+            <img src="./img/logo-crypto-desktop.svg" alt="" />
+          </a>
+          <div class="footer__socials">
+            <a href="#" target="_blank" class="footer__social"
+              ><img src="./img/icon-instagram.svg" alt=""
+            /></a>
+            <a href="#" target="_blank" class="footer__social"
+              ><img src="./img/icon-facebook.svg" alt=""
+            /></a>
+            <a href="#" target="_blank" class="footer__social"
+              ><img src="./img/icon-linkedin.svg" alt=""
+            /></a>
+          </div>
+        </div>
+        <div class="footer__center">
+          <div class="footer__center-left">
+            <h3>MENU</h3>
+            <div class="footer__navs">
+              <a href="#" class="footer__nav">HOME</a>
+              <a href="#" class="footer__nav">TOKENS</a>
+              <a href="#" class="footer__nav">ABOUT</a>
+              <a href="#" class="footer__nav">BLOG</a>
+              <a href="#" class="footer__nav">PRICING</a>
+              <a href="#" class="footer__nav">CONTACT US</a>
+            </div>
+          </div>
+          <div class="footer__center-right">
+            <div class="footer__center-right--content">
+              <h3>Download our Application</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+                sed nulla integer
+              </p>
+            </div>
+            <div class="footer__center-right--btns">
+              <a href="#" class="btnmain"
+                ><img src="./img/icon-applestore.svg" alt="" /><span
+                  >APP STORE</span
+                ></a
+              >
+              <a href="#" class="btnmain"
+                ><img src="./img/icon-chplay.svg" alt="" /><span
+                  >PLAY STORE</span
+                ></a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="footer__under">
+          <span>&#169; 2023 CFD Circle, Inc.</span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ===== Popup Video ===== -->
+    <div class="popup__video --hide">
+      <!-- <div class="popup-video-overlay"></div> -->
+      <div class="popup__video-inner">
+        <div class="popup__video-inner--src">
+          <iframe
+            width="100%"
+            height="100%"
+            src=""
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+          <div class="popup__video-close">
+            <i><img src="./img/icon-times.svg" alt="" /></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Link JS -->
+    <script src="./dest/jsmain.min.js"></script>
+    <script src="./dest/main.js"></script>
+  </body>
+</html>

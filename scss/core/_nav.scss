@@ -1,0 +1,70 @@
+.navmenu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  transform: translateX(-100%);
+  background-color: var(--blue-dark-cl);
+  transition: var(--duration);
+  @include midcol;
+  @include hide;
+  pointer-events: none;
+  ul,
+  .btnmain {
+    z-index: 1;
+  }
+  ul {
+    margin-bottom: 40px;
+    .btn {
+      font-family: sb;
+      font-size: 2.6rem;
+      line-height: 100%;
+      letter-spacing: 1.4px;
+      width: fit-content;
+      display: block;
+      text-align: center;
+      padding: 20px;
+      text-transform: uppercase;
+      margin: 0 auto;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 20px;
+        transform: scale(0);
+        width: calc(100% - 40px);
+        height: 1px;
+        background-color: var(--white-cl);
+        transition: var(--duration);
+        @include hide;
+      }
+      &:hover,
+      &.--active {
+        &::before {
+          @include unhide;
+          transform: scale(1);
+        }
+      }
+    }
+  }
+  .btnmain {
+    width: calc(100% - 90px);
+    margin: 0 auto;
+    @include midflex;
+  }
+  .blur {
+    @include midabs;
+    width: 150%;
+    height: 150%;
+    z-index: 0;
+    img {
+      @include imgcover;
+    }
+  }
+  &.--active {
+    @include unhide;
+    pointer-events: initial;
+    transform: translateX(0);
+  }
+}

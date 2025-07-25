@@ -1,0 +1,128 @@
+body {
+  --gap: 28px;
+  --grid-gap: 26px;
+  // Container
+  --max-width-page: 2560px;
+  --max-width-container: calc(1198px + calc(var(--gap) * 2));
+
+  // DESKTOP --- FONT SIZE - LINE HEIGHT - LETTER SPACING
+  --fs-h1: 6.6rem;
+  --lh-h1: 8rem;
+  --ls-h1: -1px;
+
+  --fs-h2: 4.2rem;
+  --lh-h2: 5.5rem;
+  --ls-h2: 0;
+
+  --fs-label: 1.8rem;
+  --lh-label: 2.6rem;
+  --ls-label: 0.9px;
+
+  --fs-textbtn: 1.6rem;
+  --lh-textbtn: 1.6rem;
+  --ls-textbtn: 1.6px;
+
+  --fs-bodytext: 1.8rem;
+  --lh-bodytext: 3.2rem;
+  --ls-bodytext: 0;
+
+  --fs-bodytext-small: 1.6rem;
+  --lh-bodytext-small: 2.6rem;
+  --ls-bodytext-small: 0;
+
+  --fs-textmenu: 1.4rem;
+  --lh-textmenu: 1.6rem;
+  --ls-textmenu: 1.4px;
+
+  --fs-texttag: 1.4rem;
+  --lh-texttag: 1.8rem;
+  --ls-texttag: 0.7px;
+
+  // MOBLIE --- FONT SIZE - LINE HEIGHT - LETTER SPACING
+  --fs-h1-m: 3.8rem;
+  --lh-h1-m: 4.6rem;
+  --ls-h1-m: -1px;
+
+  --fs-h2-m: 2.8rem;
+  --lh-h2-m: 3.6rem;
+  --ls-h2-m: 0;
+
+  --fs-label-m: 1.4rem;
+  --lh-label-m: 1.8rem;
+  --ls-label-m: 0.7px;
+
+  --fs-textbtn-m: 1.6rem;
+  --lh-textbtn-m: 1.6rem;
+  --ls-textbtn-m: 1.6px;
+
+  --fs-bodytext-m: 1.6rem;
+  --lh-bodytext-m: 2.6rem;
+  --ls-bodytext-m: 0;
+
+  --fs-bodytext-small-m: 1.6rem;
+  --lh-bodytext-small-m: 2.6rem;
+  --ls-bodytext-small-m: 0;
+
+  --fs-textmenu-m: 3.2rem;
+  --lh-textmenu-m: 100%;
+  --ls-textmenu-m: 1.4px;
+
+  --fs-texttag-m: 1.4rem;
+  --lh-texttag-m: 1.8rem;
+  --ls-texttag-m: 0.7px;
+
+  // General Varialbe
+  --pd-section: 120px;
+  --btn-height: 46px;
+  --header-height: 132px;
+
+  // Color
+  --main-cl: #0328ee;
+  --white-cl: #fff;
+  --white-cl-op10: rgba(255, 255, 255, 0.1);
+  --black-cl: #000;
+  --blue-cl: #010d50;
+  --blue-dark-cl: #010725;
+  --blue-hover-cl: #031fb4;
+
+  // Duration
+  --duration: 0.3s;
+
+  // Z-Index
+  --zindex-header: 10;
+}
+
+// GRID - media query breakpoints
+$xxxs-min: 360px;
+$xxs-min: 576px;
+$xs-min: 768px;
+$sm-min: 992px;
+$md-min: 1200px;
+$lg-min: 1600px;
+
+$xxs-max: ($xxs-min - 1);
+$xs-max: ($xs-min - 1);
+$sm-max: ($sm-min - 1);
+$md-max: ($md-min - 1);
+$lg-max: ($lg-min - 1);
+
+// Media Query
+@include md {
+  body {
+    --max-width-container: calc(1140px + calc(var(--gap) * 2));
+  }
+}
+
+@include sm {
+  body {
+    --max-width-container: calc(960px + calc(var(--gap) * 2));
+    --header-height: 73px;
+  }
+}
+
+@include xs {
+  body {
+    --gap: 15px;
+    --max-width-container: 100%;
+  }
+}

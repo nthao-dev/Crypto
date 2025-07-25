@@ -1,0 +1,137 @@
+.header {
+  height: var(--header-height);
+  background: linear-gradient(var(--blue-cl), transparent);
+  position: fixed;
+  width: 100%;
+  max-width: var(--max-width-page);
+  margin: 0 auto;
+  z-index: var(--zindex-header);
+  .container {
+    @include sbflex;
+    height: 100%;
+  }
+  &__left {
+    @include midflex;
+    height: 100%;
+  }
+  &__right {
+    .btnmain {
+      height: 56px;
+    }
+    .btnmenu {
+      cursor: pointer;
+      background-color: var(--main-cl);
+      width: 45px;
+      height: 45px;
+      border-radius: 100%;
+      transition: var(--duration);
+      display: none;
+      position: relative;
+      z-index: 1;
+      &:hover {
+        background-color: var(--blue-hover-cl);
+      }
+      span {
+        @include midabs;
+        display: inline-block;
+        height: 2px;
+        width: 25px;
+        background-color: var(--white-cl);
+        transition: var(--duration);
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          background-color: var(--white-cl);
+          transition: var(--duration);
+        }
+        &::before {
+          transform: translateY(9px);
+        }
+        &::after {
+          transform: translateY(-9px);
+        }
+      }
+      &.--active {
+        span {
+          transform: translateX(-50%);
+          background: transparent;
+          &::before {
+            transform: rotate(45deg) translate(0px, 0px);
+          }
+          &::after {
+            transform: rotate(-45deg) translate((0px, 0px));
+          }
+        }
+      }
+    }
+  }
+  &__logo {
+    height: 100%;
+    margin-right: 65px;
+    position: relative;
+    @include midalign;
+    z-index: 1;
+    picture {
+      @include midalign;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: -32px;
+      transform: translateY(-50%);
+      width: 1px;
+      height: calc(100% - 66px);
+      background-color: var(--blue-cl);
+    }
+  }
+  &__navs {
+    transition: var(--duration);
+    @include midflex;
+    .btn {
+      position: relative;
+      @include textmenu;
+      padding: 14px;
+      transition: var(--duration);
+      text-transform: uppercase;
+      &:first-child {
+        margin-left: -14px;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        width: calc(100% - 28px);
+        height: 1px;
+        background-color: var(--white-cl);
+        bottom: 14px;
+        transition: var(--duration);
+        transform: scale(0);
+        transform-origin: center;
+      }
+      &:hover,
+      &.--active {
+        &::before {
+          transform: scale(1);
+        }
+      }
+    }
+  }
+
+  // Responsive
+  @include sm {
+    &__navs {
+      display: none;
+    }
+    &__right {
+      .btnmain {
+        display: none;
+      }
+      .btnmenu {
+        display: block;
+      }
+    }
+  }
+}
